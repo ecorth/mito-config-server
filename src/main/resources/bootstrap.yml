@@ -1,0 +1,27 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:ecorth/mito-config-serve-files.git
+          clone-on-start: true
+          force-pull: false
+          refresh-rate: 30 # cada cuando hace busca de nuevas propiedades esta en segundos
+          default-label: main # branch of git
+          password: '{cipher}aa2a2eeda93d45ee0d019d3e0de15e09f21b6ddb07b2818fb67c42503b1a600d7844cb8bbe2dfdb1fb7fe429edfd55c680fe257c0b80f383eb33b8908133e678'
+          username: ecorth
+        encrypt:
+          enabled: true
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+encrypt:
+  key: ecorth
