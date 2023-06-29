@@ -16,7 +16,7 @@ spring:
           password: '{cipher}aa2a2eeda93d45ee0d019d3e0de15e09f21b6ddb07b2818fb67c42503b1a600d7844cb8bbe2dfdb1fb7fe429edfd55c680fe257c0b80f383eb33b8908133e678'
           username: ecorth
         encrypt:
-          enabled: true
+          enabled: false
 eureka:
   client:
     fetchRegistry: true
